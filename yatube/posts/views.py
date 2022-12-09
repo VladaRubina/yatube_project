@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.http import HttpResponse
 
 
 def index(request):
@@ -7,3 +7,7 @@ def index(request):
 
 def group_posts(request, slug):
     return HttpResponse('Категории')
+
+
+def posts_detail(request, slug):
+    return HttpResponse(f'Пост {slug}')
